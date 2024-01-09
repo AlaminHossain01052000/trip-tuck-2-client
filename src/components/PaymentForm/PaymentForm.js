@@ -1,6 +1,6 @@
 
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect,useState } from 'react';
 
 import './PaymentForm.css';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
