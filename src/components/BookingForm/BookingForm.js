@@ -47,7 +47,7 @@ console.log(user)
                 .then(data => {
 
                     if (data.insertedId) {
-                        alert("seccessfully submitted");
+                        alert("successfully submitted");
                         reset();
                     }
 
