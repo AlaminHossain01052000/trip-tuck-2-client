@@ -37,7 +37,7 @@ const [bookingInfo,setBookingInfo]=useState({})
 //   };
   const sendEmail = () => {
     console.log(bookingInfo.name,bookingInfo.email)
-    emailjs.send("service_uh2zv5a", "template_othd4tm", {
+    emailjs.send("service_f29mwnq", "template_othd4tm", {
       // Replace with your template parameters
       to_name: bookingInfo.name,
       to_email: bookingInfo.email,

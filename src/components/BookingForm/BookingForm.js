@@ -8,6 +8,7 @@ const BookingForm = () => {
     const { id } = useParams();
     const [offers, setOffers] = useState([]);
     const [myOffer, setMyOffer] = useState({})
+    
     const { user } = useAuth();
 console.log(user)
 
@@ -59,7 +60,18 @@ console.log(user)
 
 
     };
+    const getTodayDate = () => {
+        const today = new Date();
+        const year = today.getFullYear();
+        let month = today.getMonth() + 1;
+        let day = today.getDate();
 
+        month = month < 10 ? `0${month}` : month;
+        day = day < 10 ? `0${day}` : day;
+
+        return `${year}-${month}-${day}`;
+    };
+    const [minDate, setMinDate] = useState(getTodayDate());
 
     return (
 
@@ -71,7 +83,7 @@ console.log(user)
 
                 <input type="text" defaultValue={myOffer?.title} {...register("selectedOffer")} />
                 <input type="number"  {...register("numberOfPeople")} placeholder="Number of trevellers" />
-                <input type="date"  {...register("date")} />
+                <input type="date"  {...register("date")} min={minDate}/>
 
                 <input type="submit" />
             </form>}

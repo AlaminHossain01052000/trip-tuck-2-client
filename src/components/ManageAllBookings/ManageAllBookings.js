@@ -19,6 +19,7 @@ const ManageAllBookings = () => {
                     <th>Date</th>
                     <th>Booked Offers</th>
                     <th>Total Cost</th>
+                    <th>Payment Status</th>
                     <th>Status</th>
                     <th>Approve</th>
                     <th>Delete</th>
