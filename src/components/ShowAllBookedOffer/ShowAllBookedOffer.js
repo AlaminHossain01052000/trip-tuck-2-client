@@ -13,9 +13,10 @@ const ShowAllBookedOffer = (props) => {
                     if (booking._id === _id) {
                         setApprovableTrip(booking);
                     }
+                    
                 })
             });
-    }, [bookings])
+    }, [bookings,_id])
     const handleStatusUpdating = id => {
 
         approvableTrip.status = "approved";
